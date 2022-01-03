@@ -17,5 +17,6 @@ jobs:
     - name: Bump version and push tag
       uses: anothrNick/github-tag-action@master
       env:
+        INITIAL_VERSION: 16.2.27
         GITHUB_TOKEN: ${{ secrets.ZIPTOKEN }}
         REPO_OWNER: Anirudhbly
