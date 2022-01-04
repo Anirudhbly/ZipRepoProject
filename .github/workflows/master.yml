@@ -9,10 +9,11 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: Create Release Folder
-      run: zip -r release.zip . -x ".git/*" ".github/*" . ./release
+      run: rsync -arv --exclude='.git/' --exclude='.github/' --exclude='.gitignore' . ./release
     - name: Switch to Release Folder
       run: |
         cd release
+        rm .github
         ls -la
     - name: Bump version and push tag
       uses: anothrNick/github-tag-action@master
