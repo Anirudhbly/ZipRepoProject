@@ -9,9 +9,7 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: Create Release Folder
-      run: zip -r release.zip . -x ".git/*" ".github/*"
-    - name: Release to Github
-      run: echo "Release"
+      run: zip -r release.zip . -x ".git/*" ".github/*" . ./release
     - name: Switch to Release Folder
       run: |
         cd release
