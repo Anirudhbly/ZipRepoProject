@@ -13,7 +13,8 @@ jobs:
     - name: Switch to Release Folder
       run: |
         cd release
-        rm .github
+        ls -la
+        zip -r release.zip
         ls -la
     - name: Bump version and push tag
       uses: anothrNick/github-tag-action@master
