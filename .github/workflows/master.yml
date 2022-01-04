@@ -9,7 +9,7 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: Create Release Folder
-      run: rsync -arv -x ".git/*" ".github/*" ".gitignore" . ./release
+      run: zip -r release.zip . -x ".git/*" ".github/*"
     - name: Switch to Release Folder
       run: |
         cd release
