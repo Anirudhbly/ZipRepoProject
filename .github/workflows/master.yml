@@ -13,6 +13,8 @@ jobs:
     - name: Switch to Release Folder
       run: |
         ls -la
+        zip -r release.zip release/
+        ls -la
         cd release
         ls -la
     - name: Bump version and push tag
