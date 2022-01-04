@@ -15,6 +15,7 @@ jobs:
         ls -la
         zip -r release.zip release/
         ls -la
+        pwd
         cd release
         ls -la
     - name: Bump version and push tag
