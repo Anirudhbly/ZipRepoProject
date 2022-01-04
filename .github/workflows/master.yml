@@ -12,9 +12,8 @@ jobs:
       run: rsync -arv --exclude='.git/' --exclude='.github/' --exclude='.gitignore' . ./release
     - name: Switch to Release Folder
       run: |
-        cd release
         ls -la
-        zip -r release.zip
+        cd release
         ls -la
     - name: Bump version and push tag
       uses: anothrNick/github-tag-action@master
