@@ -22,6 +22,6 @@ jobs:
       uses: Anirudhbly/github-tag-action@master
       env:
         SOURCE: /home/runner/work/ZipRepoProject/ZipRepoProject/release
-        INITIAL_VERSION: 16.2.27
+   #     INITIAL_VERSION: 16.2.27
         GITHUB_TOKEN: ${{ secrets.ZIPTOKEN }}
         REPO_OWNER: Anirudhbly
