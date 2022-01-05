@@ -19,7 +19,7 @@ jobs:
         cd release
         ls -la
     - name: Bump version and push tag
-      uses: anothrNick/github-tag-action@master
+      uses: Anirudhbly/github-tag-action@master
       env:
         SOURCE: /home/runner/work/ZipRepoProject/ZipRepoProject/release
         INITIAL_VERSION: 16.2.27
